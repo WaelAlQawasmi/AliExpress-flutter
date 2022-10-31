@@ -1,2 +1,4 @@
 # AliExpress
-![assesst/img/store.png](assesst/img/store.png)
+- E-commerce idea
+## Screenshots
+![assesst/img/store.png](assesst/img/index.png)
