@@ -109,7 +109,7 @@ class _HomeState extends State<Home> {
                   height: 520,
                   child: GridView(
 
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,crossAxisSpacing: 10,mainAxisSpacing: 10,),
                     physics: BouncingScrollPhysics(),
                     scrollDirection: Axis.vertical,
                     children: [
@@ -133,16 +133,16 @@ class _HomeState extends State<Home> {
 
   Container Prodact(var img,var name,var price) {
     return Container(
-      margin: EdgeInsets.all(10),
+     margin: EdgeInsets.all(5),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      border: Border.all(width:.5)
+                      // border: Border.all(width:.5)
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Container(
-                          height: 150,
+                          height: 120,
                             width: 200,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
@@ -151,8 +151,9 @@ class _HomeState extends State<Home> {
                             ),
 
                         ),
-                        Text(name),
-                        Text("${price} \$ ")
+
+                        
+                        Expanded(child: ListTile(title:Text(name) ,subtitle:  Text("${price} \$ ") ,))
 
 
                       ],
