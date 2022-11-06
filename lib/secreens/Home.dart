@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurant_flutter/secreens/ProductDetails.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -205,6 +206,12 @@ class _HomeState extends State<Home> {
               child: ListTile(
             title: Text(name),
             subtitle: Text("${price} \$ "),
+                onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context){
+                return ProductDetails(prodactname: name,prodacImg: img,prodacPrice: price,);
+
+              }));
+                },
           ))
         ],
       ),
