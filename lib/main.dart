@@ -30,8 +30,9 @@ class MyApp extends StatelessWidget {
             secondary: Colors.redAccent,
           )
       ),
-      home: const Login(),
-      routes: {'login': (context) => Login()},
+      home:  Login(),
+      routes: {'login': (context) => Login(),
+      'home':(context)=>Home()},
     );
   }
 }
